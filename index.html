@@ -61,6 +61,9 @@
         display: block;
         width: 100%;
       }
+      /* .imgBox img.qr {
+        display: none;
+      } */
       .linkBox a {
         font-family: "Noto Sans TC", sans-serif;
         font-size: 36px;
@@ -71,6 +74,31 @@
         text-decoration: none;
       }
     </style>
+    <script>
+      // 取得所有的 .imgBox 元素
+      let imgBoxes = document.querySelectorAll(".imgBox");
+
+      // 為每個 .imgBox 添加點擊事件
+      imgBoxes.forEach(function (imgBox) {
+        imgBox.addEventListener("click", function () {
+          let iconImage = imgBox.querySelector(".icon");
+          let qrImage = imgBox.querySelector(".qr");
+
+          // 切換圖片
+          if (iconImage.style.display === "none") {
+            iconImage.style.display = "block";
+            qrImage.style.display = "none";
+          } else {
+            iconImage.style.display = "none";
+            qrImage.style.display = "block";
+          }
+        });
+
+        // 初始化顯示設定
+        imgBox.querySelector(".icon").style.display = "block";
+        imgBox.querySelector(".qr").style.display = "none";
+      });
+    </script>
   </head>
   <body>
     <main>
@@ -78,17 +106,17 @@
       <div class="content">
         <div class="item">
           <div class="imgBox">
-            <!-- <img src="images/icon_Social_Facebook.svg" alt="" /> -->
-            <img src="images/QR_FB.png" alt="" />
+            <img class="icon" src="images/icon_Social_Facebook.svg" alt="" />
+            <img class="qr" src="images/QR_FB.png" alt="" />
           </div>
           <div class="linkBox">
-            <a href="https://www.facebook.com/catz.software" target="_blank">Fackbook1</a>
+            <a href="https://www.facebook.com/catz.software" target="_blank">Fackbook</a>
           </div>
         </div>
         <div class="item">
           <div class="imgBox">
-            <img src="images/icon_Social_Instagram.svg" alt="" />
-            <img src="images/QR_IG.png" alt="" />
+            <img class="icon" src="images/icon_Social_Instagram.svg" alt="" />
+            <img class="qr" src="images/QR_IG.png" alt="" />
           </div>
           <div class="linkBox">
             <a href="https://www.instagram.com/coding.catz" target="_blank">Instagram</a>
@@ -96,8 +124,8 @@
         </div>
         <div class="item">
           <div class="imgBox">
-            <img src="images/icon_Social_Youtube.svg" alt="" />
-            <img src="images/QR_YT.png" alt="" />
+            <img class="icon" src="images/icon_Social_Youtube.svg" alt="" />
+            <img class="qr" src="images/QR_YT.png" alt="" />
           </div>
           <div class="linkBox">
             <a href="https://www.youtube.com/@Catz_CodingCat" target="_blank">Youtube</a>

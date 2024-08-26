@@ -74,31 +74,6 @@
         text-decoration: none;
       }
     </style>
-    <script>
-      // 取得所有的 .imgBox 元素
-      let imgBoxes = document.querySelectorAll(".imgBox");
-
-      // 為每個 .imgBox 添加點擊事件
-      imgBoxes.forEach(function (imgBox) {
-        imgBox.addEventListener("click", function () {
-          let iconImage = imgBox.querySelector(".icon");
-          let qrImage = imgBox.querySelector(".qr");
-
-          // 切換圖片
-          if (iconImage.style.display === "none") {
-            iconImage.style.display = "block";
-            qrImage.style.display = "none";
-          } else {
-            iconImage.style.display = "none";
-            qrImage.style.display = "block";
-          }
-        });
-
-        // 初始化顯示設定
-        imgBox.querySelector(".icon").style.display = "block";
-        imgBox.querySelector(".qr").style.display = "none";
-      });
-    </script>
   </head>
   <body>
     <main>
@@ -133,5 +108,32 @@
         </div>
       </div>
     </main>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // 取得所有的 .imgBox 元素
+        let imgBoxes = document.querySelectorAll(".imgBox");
+
+        // 為每個 .imgBox 添加點擊事件
+        imgBoxes.forEach(function (imgBox) {
+          imgBox.addEventListener("click", function () {
+            let iconImage = imgBox.querySelector(".icon");
+            let qrImage = imgBox.querySelector(".qr");
+
+            // 切換圖片
+            if (iconImage.style.display === "none") {
+              iconImage.style.display = "block";
+              qrImage.style.display = "none";
+            } else {
+              iconImage.style.display = "none";
+              qrImage.style.display = "block";
+            }
+          });
+
+          // 初始化顯示設定
+          imgBox.querySelector(".icon").style.display = "block";
+          imgBox.querySelector(".qr").style.display = "none";
+        });
+      });
+    </script>
   </body>
 </html>

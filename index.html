@@ -1,15 +1,109 @@
 <!DOCTYPE html>
-<html>
-<head>
-<style>
-body {
-  background-image: url('images/web_bg.png');
-  background-repeat: repeat;
-  background-attachment: fixed;  
-}
-</style>
-</head>
-<body>
-THE CODING CATZ.
-</body>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CodingCatz</title>
+    <style>
+      body {
+        background-image: url("images/web_bg.png");
+        background-repeat: repeat;
+        background-attachment: fixed;
+      }
+      main {
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        gap: 32px;
+        padding: 20px;
+      }
+      h1 {
+        color: #fff;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: #000;
+        filter: drop-shadow(0px 0px 4px black);
+        font-family: "Noto Sans TC", sans-serif;
+        font-size: 9vw;
+        font-style: normal;
+        font-weight: 900;
+        line-height: normal;
+      }
+      @media screen and (min-width: 480px) {
+        h1 {
+          font-size: 36px;
+        }
+      }
+      .content {
+        width: 100%;
+        max-width: 640px;
+        border-radius: 32px;
+        padding: 64px 20px;
+        opacity: 0.8;
+        background: #000;
+        box-shadow: 0px 0px 80px 0px rgba(0, 0, 0, 0.8);
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        gap: 24px;
+      }
+      .item {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+      }
+      .imgBox {
+        padding: 8px;
+        background-color: #fff;
+        border-radius: 8px;
+        width: 80px;
+      }
+      .imgBox img {
+        display: block;
+        width: 100%;
+      }
+      .linkBox a {
+        font-family: "Noto Sans TC", sans-serif;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        color: #fff;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>THE CODING CATZ.</h1>
+      <div class="content">
+        <div class="item">
+          <div class="imgBox">
+            <!-- <img src="images/icon_Social_Facebook.svg" alt="" /> -->
+            <img src="images/QR_FB.png" alt="" />
+          </div>
+          <div class="linkBox">
+            <a href="https://www.facebook.com/catz.software" target="_blank">Fackbook1</a>
+          </div>
+        </div>
+        <div class="item">
+          <div class="imgBox">
+            <img src="images/icon_Social_Instagram.svg" alt="" />
+            <img src="images/QR_IG.png" alt="" />
+          </div>
+          <div class="linkBox">
+            <a href="https://www.instagram.com/coding.catz" target="_blank">Instagram</a>
+          </div>
+        </div>
+        <div class="item">
+          <div class="imgBox">
+            <img src="images/icon_Social_Youtube.svg" alt="" />
+            <img src="images/QR_YT.png" alt="" />
+          </div>
+          <div class="linkBox">
+            <a href="https://www.youtube.com/@Catz_CodingCat" target="_blank">Youtube</a>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>

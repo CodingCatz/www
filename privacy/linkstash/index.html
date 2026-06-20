@@ -26,7 +26,16 @@
         line-height: 1.75;
         font-size: 16px;
       }
-      .wrap { max-width: 760px; margin: 0 auto; padding: 48px 20px 80px; }
+      .wrap { max-width: 760px; margin: 0 auto; padding: 32px 20px 80px; }
+      .topbar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
+      .brand { color: var(--dim); font-size: 14px; font-weight: 500; }
+      .langswitch { display: inline-flex; border: 1px solid var(--border); border-radius: 999px; overflow: hidden; }
+      .langswitch button {
+        background: none; border: none; color: var(--dim);
+        padding: 4px 14px; font-size: 13px; cursor: pointer;
+        font-family: inherit;
+      }
+      .langswitch button.active { background: var(--accent); color: #0f1115; font-weight: 700; }
       header { border-bottom: 1px solid var(--border); padding-bottom: 20px; margin-bottom: 28px; }
       h1 { font-size: 26px; font-weight: 700; margin: 0 0 6px; }
       .sub { color: var(--dim); font-size: 14px; }
@@ -34,44 +43,112 @@
       p, li { color: var(--text); }
       a { color: var(--accent); }
       ul { padding-left: 20px; }
-      code { background: var(--card); border: 1px solid var(--border); border-radius: 4px; padding: 1px 6px; font-size: 14px; }
+      code { background: var(--card); border: 1px solid var(--border); border-radius: 4px; padding: 1px 6px; font-size: 14px; word-break: break-all; }
       footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--dim); font-size: 13px; }
       footer a { color: var(--dim); }
+      [hidden] { display: none; }
     </style>
   </head>
   <body>
     <div class="wrap">
-      <header>
-        <h1>LinkStash 隱私權政策</h1>
-        <div class="sub">最後更新：2026-06-20</div>
-      </header>
+      <div class="topbar">
+        <span class="brand">CodingCatz</span>
+        <div class="langswitch">
+          <button data-lang="zh" class="active">中</button>
+          <button data-lang="en">EN</button>
+        </div>
+      </div>
 
-      <p>LinkStash（以下稱「本擴充」）是一個 Chrome 待看連結書籤管理擴充套件。本政策說明本擴充如何處理您的資料。</p>
+      <article id="zh">
+        <header>
+          <h1>LinkStash 隱私權政策</h1>
+          <div class="sub">最後更新：2026-06-20</div>
+        </header>
 
-      <h2>1. 蒐集與儲存的資料</h2>
-      <p>本擴充僅儲存您主動收存的資料：連結網址、頁面標題、您自訂的標籤與作者顯示名稱，以及介面偏好設定（排序、收合狀態等）。這些資料儲存於 Chrome 的 <code>chrome.storage.sync</code>，並透過您自己的 Google／Chrome 帳號在您的裝置間同步。</p>
+        <p>LinkStash（以下稱「本擴充」）是一個 Chrome 待看連結書籤管理擴充套件。本政策說明本擴充如何處理您的資料。</p>
 
-      <h2>2. 資料傳輸</h2>
-      <p>本擴充不會將您的資料傳送至開發者伺服器或任何第三方。唯一的外部網路請求發生於您收存 YouTube 影片時：本擴充會向 YouTube 官方 oEmbed 端點（<code>https://www.youtube.com/oembed</code>）傳送該影片網址，以取得其發布頻道名稱。此請求受 YouTube／Google 之隱私政策規範。</p>
+        <h2>1. 蒐集與儲存的資料</h2>
+        <p>本擴充僅儲存您主動收存的資料：連結網址、頁面標題、您自訂的標籤與作者顯示名稱，以及介面偏好設定（排序、收合狀態等）。這些資料儲存於 Chrome 的 <code>chrome.storage.sync</code>，並透過您自己的 Google／Chrome 帳號在您的裝置間同步。</p>
 
-      <h2>3. 頁面內容存取</h2>
-      <p>當您主動收存某頁面時，本擴充會暫時讀取該分頁的標題與作者相關資訊（透過頁面 og 標籤或 DOM），用以建立書籤。本擴充不會在背景持續監聽或讀取您的瀏覽內容。</p>
+        <h2>2. 資料傳輸</h2>
+        <p>本擴充不會將您的資料傳送至開發者伺服器或任何第三方。唯一的外部網路請求發生於您收存 YouTube 影片時：本擴充會向 YouTube 官方 oEmbed 端點（<code>https://www.youtube.com/oembed</code>）傳送該影片網址，以取得其發布頻道名稱。此請求受 YouTube／Google 之隱私政策規範。</p>
 
-      <h2>4. 資料分享與販售</h2>
-      <p>本擴充不販售、不分享、不轉移您的任何資料，也不含任何追蹤、分析或廣告。</p>
+        <h2>3. 頁面內容存取</h2>
+        <p>當您主動收存某頁面時，本擴充會暫時讀取該分頁的標題與作者相關資訊（透過頁面 og 標籤或 DOM），用以建立書籤。本擴充不會在背景持續監聽或讀取您的瀏覽內容。</p>
 
-      <h2>5. 資料刪除</h2>
-      <p>您可在側欄刪除個別連結，或透過 <code>chrome://extensions</code> 移除本擴充以清除所有本機資料。</p>
+        <h2>4. 資料分享與販售</h2>
+        <p>本擴充不販售、不分享、不轉移您的任何資料，也不含任何追蹤、分析或廣告。</p>
 
-      <h2>6. 聯絡方式</h2>
-      <p>如有任何疑問，請來信：<a href="mailto:catz.software@gmail.com">catz.software@gmail.com</a></p>
+        <h2>5. 資料刪除</h2>
+        <p>您可在側欄刪除個別連結，或透過 <code>chrome://extensions</code> 移除本擴充以清除所有本機資料。</p>
 
-      <h2>7. 政策變更</h2>
-      <p>本政策若有更新，將於本頁公布並更新上方日期。</p>
+        <h2>6. 聯絡方式</h2>
+        <p>如有任何疑問，請來信：<a href="mailto:catz.software@gmail.com">catz.software@gmail.com</a></p>
+
+        <h2>7. 政策變更</h2>
+        <p>本政策若有更新，將於本頁公布並更新上方日期。</p>
+      </article>
+
+      <article id="en" hidden>
+        <header>
+          <h1>LinkStash Privacy Policy</h1>
+          <div class="sub">Last updated: 2026-06-20</div>
+        </header>
+
+        <p>LinkStash ("the Extension") is a Chrome read-it-later bookmark manager. This policy explains how the Extension handles your data.</p>
+
+        <h2>1. Data we store</h2>
+        <p>The Extension only stores data you actively save: link URLs, page titles, your custom tags and author display names, and interface preferences (sort order, collapse state, etc.). This data is stored in Chrome's <code>chrome.storage.sync</code> and synced across your devices through your own Google/Chrome account.</p>
+
+        <h2>2. Data transmission</h2>
+        <p>The Extension does not send your data to the developer's servers or any third party. The only external network request occurs when you save a YouTube video: the Extension sends that video URL to YouTube's official oEmbed endpoint (<code>https://www.youtube.com/oembed</code>) to retrieve its publishing channel name. This request is governed by YouTube's/Google's privacy policy.</p>
+
+        <h2>3. Page content access</h2>
+        <p>When you actively save a page, the Extension temporarily reads that tab's title and author-related information (via the page's og tags or DOM) to create the bookmark. The Extension does not continuously monitor or read your browsing in the background.</p>
+
+        <h2>4. Data sharing and selling</h2>
+        <p>The Extension does not sell, share, or transfer any of your data, and contains no tracking, analytics, or ads.</p>
+
+        <h2>5. Data deletion</h2>
+        <p>You can delete individual links in the side panel, or remove the Extension via <code>chrome://extensions</code> to clear all local data.</p>
+
+        <h2>6. Contact</h2>
+        <p>Questions: <a href="mailto:catz.software@gmail.com">catz.software@gmail.com</a></p>
+
+        <h2>7. Changes</h2>
+        <p>If this policy is updated, the changes will be posted on this page with an updated date above.</p>
+      </article>
 
       <footer>
         © CodingCatz · <a href="https://www.coding-catz.com/">www.coding-catz.com</a>
       </footer>
     </div>
+
+    <script>
+      (function () {
+        var btns = document.querySelectorAll('.langswitch button');
+        function setLang(l) {
+          var en = l === 'en';
+          document.getElementById('zh').hidden = en;
+          document.getElementById('en').hidden = !en;
+          document.documentElement.lang = en ? 'en' : 'zh-Hant';
+          document.title = en
+            ? 'LinkStash Privacy Policy — CodingCatz'
+            : 'LinkStash 隱私權政策 — CodingCatz';
+          for (var i = 0; i < btns.length; i++) {
+            btns[i].classList.toggle('active', btns[i].getAttribute('data-lang') === l);
+          }
+          try { history.replaceState(null, '', '?lang=' + l); } catch (e) {}
+        }
+        for (var i = 0; i < btns.length; i++) {
+          btns[i].addEventListener('click', function () {
+            setLang(this.getAttribute('data-lang'));
+          });
+        }
+        var q = new URLSearchParams(location.search).get('lang');
+        var initial = q === 'en' || (!q && navigator.language && navigator.language.indexOf('en') === 0) ? 'en' : 'zh';
+        setLang(initial);
+      })();
+    </script>
   </body>
 </html>

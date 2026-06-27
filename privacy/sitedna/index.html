@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SiteDNA 隱私權政策 — CodingCatz</title>
+    <meta name="robots" content="index,follow" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" />
+    <style>
+      :root {
+        --bg: #0f1115; --card: #171a21; --border: #2a2f3a;
+        --text: #e6e9ef; --dim: #9aa3b2; --accent: #6cf7a8;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--bg); color: var(--text);
+        font-family: "Noto Sans TC", -apple-system, "Segoe UI", system-ui, sans-serif;
+        line-height: 1.75; font-size: 16px; }
+      .wrap { max-width: 760px; margin: 0 auto; padding: 32px 20px 80px; }
+      .topbar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
+      .brand { color: var(--dim); font-size: 14px; font-weight: 500; }
+      .langswitch { display: inline-flex; border: 1px solid var(--border); border-radius: 999px; overflow: hidden; }
+      .langswitch button { background: none; border: none; color: var(--dim); padding: 4px 14px; font-size: 13px; cursor: pointer; font-family: inherit; }
+      .langswitch button.active { background: var(--accent); color: #0f1115; font-weight: 700; }
+      header { border-bottom: 1px solid var(--border); padding-bottom: 20px; margin-bottom: 28px; }
+      h1 { font-size: 26px; font-weight: 700; margin: 0 0 6px; }
+      .sub { color: var(--dim); font-size: 14px; }
+      h2 { font-size: 18px; font-weight: 700; margin: 32px 0 8px; color: var(--accent); }
+      p, li { color: var(--text); }
+      a { color: var(--accent); }
+      code { background: var(--card); border: 1px solid var(--border); border-radius: 4px; padding: 1px 6px; font-size: 14px; word-break: break-all; }
+      footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--dim); font-size: 13px; }
+      footer a { color: var(--dim); }
+      [hidden] { display: none; }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="topbar">
+        <span class="brand">CodingCatz</span>
+        <div class="langswitch">
+          <button data-lang="zh" class="active">中</button>
+          <button data-lang="en">EN</button>
+        </div>
+      </div>
+
+      <article id="zh">
+        <header>
+          <h1>SiteDNA 隱私權政策</h1>
+          <div class="sub">最後更新：2026-06-27</div>
+        </header>
+        <p>SiteDNA（以下稱「本擴充」）是一個分析網頁設計與技術的瀏覽器擴充，會將當前網頁的技術棧、設計 token、元件、圖片與版面結構整理成報告。本政策說明本擴充如何處理您的資料。</p>
+
+        <h2>1. 資料蒐集</h2>
+        <p>本擴充<strong>不蒐集、不遠端儲存、不傳送</strong>任何個人資料，亦無使用者帳號或追蹤。</p>
+
+        <h2>2. 網頁分析處理</h2>
+        <p>當您主動點擊「分析」時，本擴充才會讀取<strong>當前分頁</strong>的 DOM 與計算後樣式以產生報告。所有分析<strong>完全在您的瀏覽器本機進行</strong>，網頁內容不會被上傳，也不會離開您的裝置。</p>
+
+        <h2>3. 本機儲存</h2>
+        <p>分析結果暫存於 <code>chrome.storage.session</code>（瀏覽器工作階段結束即自動清除）以傳遞給結果分頁；您的語言偏好存於 <code>chrome.storage.local</code>。兩者皆<strong>僅存在您的裝置本機</strong>，不外傳。</p>
+
+        <h2>4. 權限說明</h2>
+        <p>本擴充採最小權限：<code>activeTab</code> 與 <code>scripting</code>（僅在您點擊分析時，對您選定的分頁注入分析程式）、<code>storage</code>（暫存結果與語言偏好）、<code>downloads</code>（供您下載報告）。本擴充<strong>未要求任何網站主機權限</strong>，未經您操作不會接觸任何分頁。</p>
+
+        <h2>5. 網路與第三方</h2>
+        <p>本擴充本身<strong>不發出任何網路請求</strong>，不含追蹤、分析或廣告。選用的「送到 DocDrop」功能僅在您點擊時，透過瀏覽器本機的擴充間訊息把報告交給 DocDrop 擴充，<strong>不經由網際網路傳輸</strong>。</p>
+
+        <h2>6. 資料刪除</h2>
+        <p>工作階段資料會自動清除；您可透過 <code>chrome://extensions</code> 移除本擴充以清除語言偏好等本機資料。</p>
+
+        <h2>7. 聯絡方式</h2>
+        <p>如有任何疑問，請來信：<a href="mailto:catz.software@gmail.com">catz.software@gmail.com</a></p>
+
+        <h2>8. 政策變更</h2>
+        <p>本政策若有更新，將於本頁公布並更新上方日期。</p>
+      </article>
+
+      <article id="en" hidden>
+        <header>
+          <h1>SiteDNA Privacy Policy</h1>
+          <div class="sub">Last updated: 2026-06-27</div>
+        </header>
+        <p>SiteDNA ("the Extension") is a browser extension that analyzes a web page's design and technology, turning the current page's tech stack, design tokens, components, images and layout into a report. This policy explains how the Extension handles your data.</p>
+
+        <h2>1. Data collection</h2>
+        <p>The Extension <strong>does not collect, store remotely, or transmit</strong> any personal data. There are no accounts and no tracking.</p>
+
+        <h2>2. Page analysis</h2>
+        <p>Only when you actively click "Analyze" does the Extension read the <strong>current tab's</strong> DOM and computed styles to build the report. All analysis runs <strong>entirely locally in your browser</strong>; page content is never uploaded and never leaves your device.</p>
+
+        <h2>3. Local storage</h2>
+        <p>The analysis result is held temporarily in <code>chrome.storage.session</code> (cleared automatically when the browser session ends) to pass it to the results tab; your language preference is kept in <code>chrome.storage.local</code>. Both stay <strong>on your device only</strong> and are never sent elsewhere.</p>
+
+        <h2>4. Permissions</h2>
+        <p>The Extension uses minimal permissions: <code>activeTab</code> and <code>scripting</code> (inject the analyzer into the tab you choose, only when you click Analyze), <code>storage</code> (hold the result and language preference), and <code>downloads</code> (let you save the report). It requests <strong>no host permissions</strong> and never touches a tab without your action.</p>
+
+        <h2>5. Network and third parties</h2>
+        <p>The Extension itself makes <strong>no network requests</strong> and contains no tracking, analytics, or ads. The optional "Send to DocDrop" feature, only when you click it, passes the report to the DocDrop extension via a local in-browser message and <strong>does not transmit data over the internet</strong>.</p>
+
+        <h2>6. Data deletion</h2>
+        <p>Session data clears automatically; you can remove the Extension via <code>chrome://extensions</code> to clear local data such as the language preference.</p>
+
+        <h2>7. Contact</h2>
+        <p>Questions: <a href="mailto:catz.software@gmail.com">catz.software@gmail.com</a></p>
+
+        <h2>8. Changes</h2>
+        <p>If this policy is updated, the changes will be posted on this page with an updated date above.</p>
+      </article>
+
+      <footer>© CodingCatz · <a href="https://www.coding-catz.com/">www.coding-catz.com</a></footer>
+    </div>
+
+    <script>
+      (function () {
+        var btns = document.querySelectorAll('.langswitch button');
+        function setLang(l) {
+          var en = l === 'en';
+          document.getElementById('zh').hidden = en;
+          document.getElementById('en').hidden = !en;
+          document.documentElement.lang = en ? 'en' : 'zh-Hant';
+          document.title = en ? 'SiteDNA Privacy Policy — CodingCatz' : 'SiteDNA 隱私權政策 — CodingCatz';
+          for (var i = 0; i < btns.length; i++) btns[i].classList.toggle('active', btns[i].getAttribute('data-lang') === l);
+          try { history.replaceState(null, '', '?lang=' + l); } catch (e) {}
+        }
+        for (var i = 0; i < btns.length; i++) btns[i].addEventListener('click', function () { setLang(this.getAttribute('data-lang')); });
+        var q = new URLSearchParams(location.search).get('lang');
+        setLang(q === 'en' || (!q && navigator.language && navigator.language.indexOf('en') === 0) ? 'en' : 'zh');
+      })();
+    </script>
+  </body>
+</html>
